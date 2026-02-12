@@ -3,7 +3,7 @@ import './App.css'
 
 // import PexelsApi from './components/Test/PexelsApi'
 // import FetchAPIImgGallery from './components/Test/FetchAPIImgGallery'
-import Test from './components/Test/Test'
+import Test from './components/Test/Pexels/Test'
 
 // All the Topics in this project
 import ComponentExample from './Topics/ComponentExample'
@@ -14,12 +14,19 @@ import { UseEffectExampleWithFetch } from './Topics/ComponentExample'
 import { EventHandlingExample } from './Topics/ComponentExample'
 import { ListAndKeysExample } from './Topics/ComponentExample'
 
+// Project imports
+import DisplayGallery from './components/Project/DisplayGallery'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <h1>Hello, There!</h1>
+      <div className='Project'>
+        <DisplayGallery />
+
+      </div>
       <div className='Topics'>
         <ComponentExample />
         <PropsExample name="Nicolas" age="25"/>
@@ -31,6 +38,7 @@ function App() {
 
         {/* <Test /> */}
       </div>
+
       <h2>Goodbye, There!</h2>
     </>
   )
